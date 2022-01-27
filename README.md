@@ -31,11 +31,11 @@ As you can see, this repository only has a **package-lock.json** which means tha
 
 ### 🏢 Project Structure
 
-We've documented a little on our project structure decisions [**here**](/docs/project-structure.md).
+Still a WIP 😅, we'll be documenting ASAP our decisions on the project structure architecture.
 
 ### 🔨 Firebase Setup
 
-If you're new to **Firebase**, we've a [**guide**](/docs/firebase-setup.md) prepared for you.
+If you're new to **Firebase**, check it out this [video](https://www.youtube.com/watch?v=6juww5Lmvgo) on how to create a Firebase project.
 
 ### 🔋 Available Scripts
 
