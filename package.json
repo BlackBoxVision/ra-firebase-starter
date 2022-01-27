@@ -1,9 +1,10 @@
 {
-  "name": "@blackbox-vision/firebase-backoffice-starter",
+  "name": "@blackbox-vision/ra-firebase-starter",
   "version": "1.0.0",
   "dependencies": {
     "@blackbox-vision/ra-language-spanish": "^3.16.2",
     "@blackbox-vision/ra-layout": "0.0.30",
+    "@blackbox-vision/ra-rbac": "^0.2.0",
     "@date-io/date-fns": "^1.3.13",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",

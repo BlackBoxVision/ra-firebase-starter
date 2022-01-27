@@ -1,13 +1,14 @@
-import { FirebaseDataProvider } from "react-admin-firebase";
+import { FirebaseDataProvider as createDataProvider } from "react-admin-firebase";
 
-import { firebaseAppCredentials } from "../firebase/config";
-import { firebaseApp } from "../firebase";
+import { firebaseAppCredentials } from "../config/firebase";
 
-export let dataProvider = FirebaseDataProvider(firebaseAppCredentials, {
+export let dataProvider = createDataProvider(firebaseAppCredentials, {
   logging: true,
-  app: firebaseApp,
+  softDelete: false,
   persistence: "local",
-  dontAddIdFieldToDoc: true,
+  metaFieldCasing: "camel",
+  associateUsersById: true,
+  dontAddIdFieldToDoc: false,
   lazyLoading: {
     enabled: true,
   },

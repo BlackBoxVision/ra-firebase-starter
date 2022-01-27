@@ -10,6 +10,7 @@ type Props = CoreLayoutProps & {
   [key: string]: any;
 };
 
+// TODO: check when sidebar is open to pass style information
 let AppLayout: React.FC<Props> = (props: Props) => {
   let menuItems = useMenuItemsContext();
   let styles = useStyles();
@@ -21,9 +22,10 @@ let AppLayout: React.FC<Props> = (props: Props) => {
   return (
     <Layout
       {...(props as any)}
+      items={menuItems}
       iconStyle={iconStyle}
       layoutStyles={styles}
-      items={menuItems}
+      sidebarOpenWidth={240}
     />
   );
 };

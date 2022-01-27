@@ -19,6 +19,7 @@ export let useStyles = makeStyles({
   },
   menuLink: {
     color: "#FFF",
+    width: 240,
   },
   logoutButton: {
     position: "absolute",
