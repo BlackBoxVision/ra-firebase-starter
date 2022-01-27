@@ -4,14 +4,14 @@ At [**BlackBox Vision**](https://www.blackbox-vision.tech) we use heavily React 
 
 Also, we rely on firebase a lot for MVP products. After a lot of work and improvements over time, we've created this starter that includes everything you would need to work with RA and Firebase.
 
-<!-- ## Table of contents
+## Table of contents
 
-- [Requirements](#Requirements)
-- [Getting Started](#Getting-Started)
-- [Dependency Management](#Dependency-Management)
-- [Project Structure](#Project-Structure)
-- [Firebase Setup](#Firebase-Setup)
-- [Available Scripts](#Available-Scripts) -->
+- [Requirements](#-requirements)
+- [Getting Started](#-getting-started)
+- [Dependency Management](#-dependency-management)
+- [Project Structure](#-project-structure)
+- [Firebase Setup](#-firebase-setup)
+- [Available Scripts](#-available-scripts)
 
 ### ✨ Requirements
 
