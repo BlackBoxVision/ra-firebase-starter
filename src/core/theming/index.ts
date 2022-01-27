@@ -13,6 +13,7 @@ export let theme = createTheme({
           margin: 0,
           padding: 0,
           backgroundColor: "white",
+          fontFamily: "'Ubuntu', sans-serif",
         },
       },
     },

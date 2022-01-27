@@ -1,4 +1,5 @@
 export let typography: any = {
+  fontFamily: "'Ubuntu', sans-serif",
   h1: {
     fontWeight: "bold",
     fontSize: "2.5rem",

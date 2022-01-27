@@ -1,7 +1,7 @@
 import React from "react";
+import { Admin } from "react-admin";
 import esLocale from "date-fns/locale/es";
 import { createBrowserHistory } from "history";
-import { Admin, ListGuesser } from "react-admin";
 import { RbacResource as Resource } from "@blackbox-vision/ra-rbac";
 
 import { theme } from "./core/theming";
@@ -16,6 +16,8 @@ import { canActivate } from "./core/helpers/canActivate";
 
 import AppLayout from "./components/templates/app-layout";
 import AppProvider from "./components/templates/app-provider";
+
+import userResourceProps from "./pages/users";
 
 let browserHistory = createBrowserHistory();
 
@@ -35,8 +37,7 @@ const App = () => {
         dataProvider={dataProvider}
         authProvider={authProvider}
       >
-        {/* TODO: add your resources under pages folder and import and add Resources here */}
-        <Resource name="users" list={ListGuesser} />
+        <Resource {...userResourceProps} />
       </Admin>
     </AppProvider>
   );
