@@ -7,6 +7,7 @@ export let dataProvider = createDataProvider(firebaseAppCredentials, {
   softDelete: false,
   persistence: "local",
   metaFieldCasing: "camel",
+  // Comment this flag if "users" collection not exists in Firestore
   associateUsersById: true,
   dontAddIdFieldToDoc: false,
   lazyLoading: {

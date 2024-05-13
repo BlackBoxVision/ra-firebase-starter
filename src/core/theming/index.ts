@@ -141,16 +141,10 @@ export let theme = createTheme({
         border: "1px dashed #BABABA",
       },
     },
-    MuiFormHelperText: {
-      root: {
-        "&$error": {
-          position: "absolute",
-          top: "100%",
-        },
-        "&$contained": {
-          position: "absolute",
-          top: "75%",
-        },
+    // Sidebar link items fix
+    RaSidebar: {
+      fixed: {
+        position: "relative",
       },
     },
   },

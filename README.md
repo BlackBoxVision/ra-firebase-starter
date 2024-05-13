@@ -11,6 +11,7 @@ Also, we rely on firebase a lot for MVP products. After a lot of work and improv
 - [Dependency Management](#-dependency-management)
 - [Project Structure](#-project-structure)
 - [Firebase Setup](#-firebase-setup)
+- [Running the project](#-running-the-project)
 - [Available Scripts](#-available-scripts)
 
 ### ✨ Requirements
@@ -35,16 +36,65 @@ Still a WIP 😅, we'll be documenting ASAP our decisions on the project structu
 
 ### 🔨 Firebase Setup
 
-If you're new to **Firebase**, check it out this [video](https://www.youtube.com/watch?v=6juww5Lmvgo) on how to create a Firebase project.
+If you're new to **Firebase**, check out this [video](https://www.youtube.com/watch?v=6juww5Lmvgo) on how to create a Firebase project.
+
+#### 1. Authentication
+
+All requests must contain a `Bearer Token` to access Firestore data. To enable this, you need to activate [Firebase Authentication](https://console.firebase.google.com/project/ra-firebase-starter/authentication) manually. 
+
+1. Go to the "Sign-In method" tab.
+2. Choose "Native Providers", then select "Email/Password".
+3. After that, navigate to the "Users" tab.
+4. Create a new admin user with the email "admin@email.com", or any other email of your preference.
+   
+This will allow logging in from the page `/login`.
+
+
+#### 2. Read/Write data
+
+`Important❗:`
+Before you can create or read data directly from the database, make sure to activate [Firebase Firestore](https://console.firebase.google.com/project/ra-firebase-starter/firestore) manually from Firebase Console.
+
+
+#### 3. Upload Images
+
+`Important❗:`
+To enable file uploads for images, you need to activate [Firebase Storage](https://console.firebase.google.com/project/ra-firebase-starter/storage) manually from Firebase Console.
+
+### 🏃‍♂️ Running the project
+
+To run the project you need to perform the following steps:
+
+1. Install all the project dependencies
+
+```
+npm i
+```
+
+2. Add an `.env` file like the following one
+
+```bash
+# API Location
+VITE_APP_BASE_URL=your-api-location
+VITE_APP_FIREBASE_APPLICATION_CREDENTIALS=your-firebase-config-object
+```
+
+3. Run the app
+
+```bash
+npm start
+```
+
+When finished building your app will be available at `http://localhost:3000`.
 
 ### 🔋 Available Scripts
 
-Since this project is [**CRA (Create React App)**](https://create-react-app.dev) based, you inherit all commands, that are the following ones:
+Since this project is [**VITE**](https://vitejs.dev/) based, you inherit all commands, that are the following ones:
 
-- **Start**: Start will launch your application, when port 3000 is available, it will be launched on http://localhost:3000.
+- **Start**: Start dev server and launch your application.
 
 ```bash
-npm run start
+npm run dev
 ```
 
 - **Build**: Build will generate a production build of your app which then can be uploaded to any place where you want it to be hosted and served to end users.
@@ -53,8 +103,8 @@ npm run start
 npm run build
 ```
 
-- **Eject**: Take care with this one. Eject gives you all the project configuration so you can customize to bring your own desired behaviour with the build toolchain.
+- **Preview**: Locally preview production build.
 
 ```bash
-npm run eject
+npm run preview
 ```
