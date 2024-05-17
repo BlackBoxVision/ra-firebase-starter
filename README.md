@@ -47,8 +47,7 @@ All requests must contain a `Bearer Token` to access Firestore data. To enable t
 3. After that, navigate to the "Users" tab.
 4. Create a new admin user with the email "admin@email.com", or any other email of your preference.
    
-This will allow logging in from the page `/login`.
-
+This will allow to log in from the page `/login`.
 
 #### 2. Read/Write data
 
