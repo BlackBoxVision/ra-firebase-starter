@@ -74,18 +74,16 @@ npm i
 2. Add an `.env` file like the following one
 
 ```bash
-# API Location
-VITE_APP_BASE_URL=your-api-location
 VITE_APP_FIREBASE_APPLICATION_CREDENTIALS=your-firebase-config-object
 ```
 
 3. Run the app
 
 ```bash
-npm start
+npm run dev
 ```
 
-When finished building your app will be available at `http://localhost:3000`.
+When finished building your app for development, it'll be available at `http://localhost:3000`.
 
 ### 🔋 Available Scripts
 
