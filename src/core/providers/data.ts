@@ -16,4 +16,8 @@ export let dataProvider = createDataProvider(firebaseAppCredentials, {
   firestoreCostsLogger: {
     enabled: true,
   },
+  renameMetaFields: {
+    created_at: "createdAt",
+    updated_at: "updatedAt",
+  },
 });

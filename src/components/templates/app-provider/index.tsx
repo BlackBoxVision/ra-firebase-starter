@@ -1,17 +1,18 @@
 import React from "react";
 import { Loading } from "react-admin";
-import DateFnsUtils from "@date-io/date-fns";
-import { MuiPickersUtilsProvider } from "@material-ui/pickers";
-import { CssBaseline, Theme, ThemeProvider } from "@material-ui/core";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { RbacProvider } from "@blackbox-vision/ra-rbac";
+import { CssBaseline, Theme, ThemeProvider } from "@mui/material";
 
 import { MenuItemsProvider } from "../../../core/context/menu";
-import { RbacProvider } from "@blackbox-vision/ra-rbac";
 
 type Props = {
   items: any[];
-  locale: any;
+  locale?: any;
   theme: Theme;
   canActivate: any;
+  children: any;
 };
 
 // TODO: implement dark mode support
@@ -26,10 +27,10 @@ let AppProvider: React.FC<Props> = ({
     <RbacProvider canActivate={canActivate}>
       <MenuItemsProvider items={items}>
         <ThemeProvider theme={theme}>
-          <MuiPickersUtilsProvider utils={DateFnsUtils} locale={locale}>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
             <CssBaseline />
             <React.Suspense fallback={<Loading />}>{children}</React.Suspense>
-          </MuiPickersUtilsProvider>
+          </LocalizationProvider>
         </ThemeProvider>
       </MenuItemsProvider>
     </RbacProvider>

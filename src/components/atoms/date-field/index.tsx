@@ -1,7 +1,8 @@
+import { useMemo } from "react";
 import {
   DateFieldProps,
   DateField as RaDateField,
-  useLocale,
+  useLocales,
 } from "react-admin";
 
 const dateOptions: Intl.DateTimeFormatOptions = {
@@ -11,12 +12,16 @@ const dateOptions: Intl.DateTimeFormatOptions = {
 };
 
 export default function DateField(props: DateFieldProps) {
-  let locale = useLocale();
+  let locales = useLocales();
+
+  let allLocales = useMemo(() => {
+    return locales.map((item) => item.locale);
+  }, [locales]);
 
   return (
     <RaDateField
       emptyText="-"
-      locales={locale}
+      locales={allLocales}
       options={dateOptions}
       {...props}
     />

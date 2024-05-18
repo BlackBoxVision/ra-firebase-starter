@@ -82,7 +82,7 @@ VITE_APP_FIREBASE_APPLICATION_CREDENTIALS=your-firebase-config-object
 npm run dev
 ```
 
-When finished building your app for development, it'll be available at `http://localhost:3000`.
+When finished building your app for development, it'll be available at `http://localhost:5173`.
 
 ### 🔋 Available Scripts
 

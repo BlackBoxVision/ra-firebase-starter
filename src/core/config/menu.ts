@@ -1,9 +1,10 @@
-import { PeopleOutlined } from "@material-ui/icons";
+import { PeopleOutlined } from "@mui/icons-material";
+import { Resources } from "../constants/enums";
 
 export let menuItems = [
   {
     type: "resource",
-    name: "users",
+    name: Resources.USERS,
     icon: PeopleOutlined,
     label: "Usuarios",
   },

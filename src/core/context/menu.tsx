@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import { createContext, useContext, PropsWithChildren, FC } from "react";
 
-let MenuItemsContext = React.createContext<any[]>([]);
+let MenuItemsContext = createContext<any[]>([]);
 
-type Props = {
+type Props = PropsWithChildren & {
   items: any[];
 };
 
-export let MenuItemsProvider: React.FC<Props> = ({ children, items }) => {
+export let MenuItemsProvider: FC<Props> = ({ children, items }) => {
   return (
     <MenuItemsContext.Provider value={items}>
       {children}
